@@ -109,4 +109,11 @@ input{
     border-radius: 12px;
     height: 46px;
     outline: none;
+    padding: 12px;
+}
+.h-vh{
+    height: calc(100vh - 166px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

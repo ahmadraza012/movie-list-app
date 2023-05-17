@@ -6,7 +6,6 @@ const MovieList = ({ allEntry, setAllEntry }) => {
         let arr = [...allEntry];
         arr.splice(index,1);
         setAllEntry(arr);
-
       }
     return (
         <div className='container'>
@@ -14,7 +13,7 @@ const MovieList = ({ allEntry, setAllEntry }) => {
                 <h1 className='text-white'>Movie Lists</h1>
                 <Link to="/movie-form" className='btn btn-primary'>Add Movie</Link>
             </div>
-            <div className="row  mt-4">
+           { allEntry.length > 0 && <div className="row  mt-4">
                 {
                 allEntry?.map((element,index) => {
                   
@@ -57,7 +56,15 @@ const MovieList = ({ allEntry, setAllEntry }) => {
 
                     )
                 })}
-            </div>
+            </div>}
+
+            {
+                allEntry.length <= 0  &&
+                    <div className="h-vh">
+                        <h1 className='text-white'>No Films</h1>
+                    </div>
+            
+            }
         </div>
     )
 }

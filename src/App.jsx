@@ -14,6 +14,7 @@ const getLocalItems = () => {
 function App() {
 
   const [allEntry, setAllEntry] = useState(getLocalItems())
+ 
 
   useEffect(() => {
     localStorage.setItem("films", JSON.stringify(allEntry))
@@ -27,7 +28,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/"  element={<MovieList  allEntry={allEntry} setAllEntry={setAllEntry} />} />
-          <Route path="/movie-form"   element={<MovieForm allEntry={allEntry} setAllEntry={setAllEntry} />} />
+          <Route path="/movie-form"   element={<MovieForm  allEntry={allEntry} setAllEntry={setAllEntry} />} />
         </Routes>
       </BrowserRouter>
     </>
@@ -35,3 +36,4 @@ function App() {
 }
 
 export default App
+ 

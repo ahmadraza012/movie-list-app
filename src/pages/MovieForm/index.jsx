@@ -10,7 +10,6 @@ const MovieForm = ({ allEntry, setAllEntry }) => {
     // const [allEntry, setAllEntry] = useState([])
 
 
-
     const submitForm = (e) => {
         e.preventDefault(0)
         if (name.length > 0 && genre.length > 0 && year.length > 0) {
